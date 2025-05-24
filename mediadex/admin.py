@@ -78,7 +78,6 @@ admin.site.register(MangaComment, MangaCommentAdmin)
 
 # Novel
 
-    
 class NovelAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'get_tags')
     
@@ -86,7 +85,6 @@ class NovelAdmin(admin.ModelAdmin):
         return ", ".join([tag.name for tag in obj.tags.all()])
     
     get_tags.short_description = 'Tags'
-
 
 class NovelChapterAdmin(admin.ModelAdmin):
     fieldsets = [

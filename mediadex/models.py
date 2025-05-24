@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator 
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
@@ -14,7 +13,6 @@ class Comment(models.Model):
         return self.text
 
 # Manga
-
     
 class Manga(models.Model):
     name = models.CharField()
@@ -74,4 +72,3 @@ class NovelTag(models.Model):
 class NovelComment(models.Model):
     novel = models.ForeignKey(Novel, on_delete=models.CASCADE, default=None)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE, default=None)
-    
