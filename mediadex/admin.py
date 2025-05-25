@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import \
-    Manga, MangaChapter, MangaChapterPage, MangaTag, MangaComment, \
-    Novel, NovelChapter, NovelTag, NovelComment, \
+    Manga, MangaChapter, MangaChapterPage, MangaComment, \
+    Novel, NovelChapter, NovelComment, \
     Tag, Comment
 
 

@@ -38,10 +38,6 @@ class MangaChapterPage(models.Model):
     def __str__(self):
         return self.number
 
-class MangaTag(models.Model):
-    manga = models.ForeignKey(Manga, on_delete=models.CASCADE, default=None)
-    tag = models.ForeignKey(Tag, on_delete=models.DO_NOTHING, default=None)
-
 class MangaComment(models.Model):
     manga = models.ForeignKey(Manga, on_delete=models.CASCADE, default=None)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE, default=None)
@@ -64,11 +60,7 @@ class NovelChapter(models.Model):
     
     def __str__(self):
         return f"chapter {self.number}: {self.name}"
-
-class NovelTag(models.Model):
-    novel = models.ForeignKey(Novel, on_delete=models.CASCADE, default=None)
-    tag = models.ForeignKey(Tag, on_delete=models.DO_NOTHING, default=None)
-
+    
 class NovelComment(models.Model):
     novel = models.ForeignKey(Novel, on_delete=models.CASCADE, default=None)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE, default=None)
