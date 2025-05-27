@@ -41,3 +41,7 @@ class MangaSource(ABC):
             'next': self.get_next_chapter(current_chapter_url, manga_url),
             'previous': self.get_previous_chapter(current_chapter_url, manga_url)
         }
+
+    @abstractmethod
+    def get_popular_manga(self, page: int = 1):
+        pass

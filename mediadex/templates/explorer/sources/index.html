@@ -1,0 +1,11 @@
+
+{% extends "../../base.html" %}
+{% block content %}
+    {% if mangas %}
+        <div class="flex flex-wrap">
+            {% for manga in mangas %}
+                <div class="w-80">{{manga.title}}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
